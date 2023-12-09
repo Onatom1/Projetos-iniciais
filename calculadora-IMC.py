@@ -87,5 +87,6 @@ b_calcular = Button(frame_baixo, command=calcular, text="Calcular", width=34, he
 b_calcular.grid(row=4, column=0, sticky=NSEW, pady=60, padx=5, columnspan=30)
 
 
+
 # --------------- Loop para manter janela aberta ---------------------- #
 janela.mainloop()

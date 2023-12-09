@@ -176,5 +176,9 @@ l_resultado.place(x=0, y=7)
 botao_calcular = Button(framePassivos,command=calcular, width=12, anchor=CENTER, text=" Calcular".upper(), overrelief=RIDGE,  font=('ivy 9 bold '),bg=cor1, fg=cor0 )
 botao_calcular.place(x=10, y=310)
 
+# Rodapé --------------------------------------------------------------
+rodape_label = Label(janela, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor4)
+rodape_label.place(relx=0, rely=1.0, anchor=SW, y=-5)
+
 
 janela.mainloop()

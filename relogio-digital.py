@@ -81,6 +81,10 @@ app_img = ImageTk.PhotoImage(app_img)
 app_logo = Label(janela, image=app_img, compound=LEFT, padx=5, relief=FLAT, anchor=NW, bg=cor1, fg=cor4)
 app_logo.place(x=270, y=115)
 
+# Rodapé --------------------------------------------------------------
+rodape_label = Label(janela, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor2)
+rodape_label.place(relx=0, rely=1.0, anchor=SW, y=-5)
+
 #Executar
 relogio()
 janela.mainloop()
