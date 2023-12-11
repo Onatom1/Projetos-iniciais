@@ -35,22 +35,22 @@ cor4 = "#8C82C6" #Roxo
 fundo = "#303F9F"  # Azul Escuro
 
 # --------------- Janela ---------------------- #
-janela = Tk()
-janela.title('')
-janela.geometry('235x318')
-janela.configure(bg=cor1)
+root = Tk()
+root.title('')
+root.geometry('235x318')
+root.configure(bg=cor1)
 
 # Para entrada de valor único
 valor_texto = StringVar()
 
 
 # --------------- Frames ---------------------- #
-ttk.Separator(janela, orient=HORIZONTAL).grid(row=0, columnspan=1, ipadx=280)
+ttk.Separator(root, orient=HORIZONTAL).grid(row=0, columnspan=1, ipadx=280)
 
-frame_tela = Frame(janela, width=300, height=56,bg=cor2, pady=0, padx=0, relief="flat",)
+frame_tela = Frame(root, width=300, height=56,bg=cor2, pady=0, padx=0, relief="flat",)
 frame_tela.grid(row=1, column=0, sticky=NW)
 
-frame_quadros = Frame(janela, width=300, height=340,bg=fundo, pady=0, padx=0, relief="flat",)
+frame_quadros = Frame(root, width=300, height=340,bg=fundo, pady=0, padx=0, relief="flat",)
 frame_quadros.grid(row=2, column=0, sticky=NW)
 
 # --------------- Label ---------------------- #
@@ -99,4 +99,4 @@ b_17.place(x=118, y=208)
 b_18 = Button(frame_quadros,command = lambda: calcular(), text="=", width=5, height=2, bg=cor4, fg=cor1,font=('Ivy 13 bold'),relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
 
-janela.mainloop()
+root.mainloop()

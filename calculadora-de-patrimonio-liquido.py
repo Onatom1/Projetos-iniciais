@@ -18,13 +18,13 @@ cor11 = "#f2f4f2"
 
 
 # Janela
-janela = Tk()
-janela.title ("")
-janela.geometry('380x500')
-janela.configure(background=cor1)
-janela.resizable(width=FALSE, height=FALSE)
+root = Tk()
+root.title ("")
+root.geometry('380x500')
+root.configure(background=cor1)
+root.resizable(width=FALSE, height=FALSE)
 
-style = ttk.Style(janela)
+style = ttk.Style(root)
 style.theme_use("clam")
 
 
@@ -61,14 +61,14 @@ def calcular():
  
 # Frames
 # Frame Cima --------------------------------------------------
-frameCima = Frame(janela, width=380, height=50, bg=cor1, relief="flat")
+frameCima = Frame(root, width=380, height=50, bg=cor1, relief="flat")
 frameCima.grid(row=0, column=0, columnspan=2)
 
 # Frame Baixo --------------------------------------------------
-frameBaixo = Frame(janela, width=380, height=400, bg=cor1, relief="flat")
+frameBaixo = Frame(root, width=380, height=400, bg=cor1, relief="flat")
 frameBaixo.grid(row=2, column=0, pady=10)
 
-frameResultado = Frame(janela, width=364, height=50, bg=cor3, relief="flat")
+frameResultado = Frame(root, width=364, height=50, bg=cor3, relief="flat")
 frameResultado.grid(row=1, column=0, pady=10)
 
 # Dividindo o Frame
@@ -177,8 +177,8 @@ botao_calcular = Button(framePassivos,command=calcular, width=12, anchor=CENTER,
 botao_calcular.place(x=10, y=310)
 
 # Rodapé --------------------------------------------------------------
-rodape_label = Label(janela, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor4)
+rodape_label = Label(root, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor4)
 rodape_label.place(relx=0, rely=1.0, anchor=SW, y=-5)
 
 
-janela.mainloop()
+root.mainloop()

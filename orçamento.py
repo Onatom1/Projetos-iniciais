@@ -17,13 +17,13 @@ cor10 = "#6e8faf"
 cor11 = "#f2f4f2"
 
 # Janela
-janela = Tk()
-janela.title('')
-janela.geometry('390x300')
-janela.configure(background=cor1)
-janela.resizable(width=False, height=False)
+root = Tk()
+root.title('')
+root.geometry('390x300')
+root.configure(background=cor1)
+root.resizable(width=False, height=False)
 
-style = ttk.Style(janela)
+style = ttk.Style(root)
 style.theme_use('clam')
 
 # Função
@@ -41,7 +41,7 @@ def calcular():
 
 # Frames
 # Frame Cima --------------------------------------------------
-frameCima = Frame(janela, width=300, height=50, bg=cor1, relief='flat')
+frameCima = Frame(root, width=300, height=50, bg=cor1, relief='flat')
 frameCima.grid(row=0, column=0, columnspan=3)
 
 # LOGO
@@ -59,7 +59,7 @@ l_linha = Label(frameCima, width=295, height=1, anchor=NW, font=('Verdana 1'), b
 l_linha.grid(row=1, column=0, columnspan=3)
 
 # Frame Meio --------------------------------------------------
-frameMeio = Frame(janela, width=300, height=90, bg=cor1, relief="solid")
+frameMeio = Frame(root, width=300, height=90, bg=cor1, relief="solid")
 frameMeio.grid(row=1, column=0, columnspan=3)
 
 l_valor_quantia = Label(frameMeio, text='Renda Mensal?', height=1, anchor=NW, font=('Ivy 10'), bg=cor1, fg=cor4)
@@ -72,7 +72,7 @@ botao_calcular = Button(frameMeio, anchor=NW, text=' Calcular'.upper(), overreli
 botao_calcular.grid(row=0, column=2, padx=10)
 
 # Frame Baixo -------------------------------------------------------
-frameBaixo = Frame(janela, width=300, height=200, bg=cor9, relief="raised")
+frameBaixo = Frame(root, width=300, height=200, bg=cor9, relief="raised")
 frameBaixo.grid(row=2, column=0, columnspan=3, pady=10)
 
 l_nome = Label(frameBaixo, text='Regra Orçamentária 50/30/20:', padx=10, width=35, height=1, anchor=NW, font=('Verdana 11'), bg=cor3, fg=cor1)
@@ -101,8 +101,8 @@ label_poupanca.grid(row=3, column=1, pady=5, sticky=W)
 
 
 # Rodapé --------------------------------------------------------------
-rodape_label = Label(janela, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor4)
+rodape_label = Label(root, text='By Yury Mota', font=('Verdana 8'), bg=cor1, fg=cor4)
 rodape_label.place(relx=0, rely=1.0, anchor=SW, y=-5)
 
 
-janela.mainloop()
+root.mainloop()
