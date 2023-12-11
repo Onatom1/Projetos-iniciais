@@ -27,13 +27,13 @@ co2 = "#4065a1"  # Azul
 
 
 # --------------- Janela ---------------------- #
-janela = Tk()
-janela.title('')
-janela.geometry('295x230')
-janela.configure(bg=co1)
+root  = Tk()
+root.title('')
+root.geometry('295x230')
+root.configure(bg=co1)
 
 # --------------- Frames ---------------------- #
-frame_cima = Frame(janela, width=295, height=50, bg=co1, pady=0, padx=0, relief="flat")
+frame_cima = Frame(root, width=295, height=50, bg=co1, pady=0, padx=0, relief="flat")
 frame_cima.grid(row=0, column=0, sticky=NSEW)
 
 # LOGO
@@ -41,14 +41,14 @@ app_img = Image.open('image/log.png')
 app_img = app_img.resize((30, 30))
 app_img = ImageTk.PhotoImage(app_img)
 
-app_logo = Label(janela, image=app_img, compound=LEFT, padx=5, relief=FLAT, anchor=NW, bg=co1, fg=co2)
+app_logo = Label(root, image=app_img, compound=LEFT, padx=5, relief=FLAT, anchor=NW, bg=co1, fg=co2)
 app_logo.place(x=10, y=0)
 
 
-frame_baixo = Frame(janela, width=295, height=200, bg=co1, pady=0, padx=0, relief="flat")
+frame_baixo = Frame(root, width=295, height=200, bg=co1, pady=0, padx=0, relief="flat")
 frame_baixo.grid(row=1, column=0, sticky=NSEW)
 
-style = ttk.Style(janela)
+style = ttk.Style(root)
 style.theme_use("clam")
 
 # --------------- Config dos Frames de cima ---------------------- #
@@ -89,4 +89,4 @@ b_calcular.grid(row=4, column=0, sticky=NSEW, pady=60, padx=5, columnspan=30)
 
 
 # --------------- Loop para manter janela aberta ---------------------- #
-janela.mainloop()
+root.mainloop()
