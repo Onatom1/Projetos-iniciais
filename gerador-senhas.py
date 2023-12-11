@@ -5,6 +5,12 @@ from PIL import ImageTk, Image
 import random
 import string
 
+# Definindo Cada Tipo:
+alfabeto_menos = string.ascii_lowercase
+alfabeto_mais = string.ascii_uppercase
+numeros = '123456789'
+simbolos = "[]{}()*;/,_-"
+
 # --------------- Cores ---------------------- #
 cor0 = "#444466"  # Preto
 cor1 = "#feffff"  # Branco
@@ -99,12 +105,6 @@ def criar_senha():
     b_copiar = Button(frame_box, command=copiar_senha, text="Copiar",width=7, height=1, overrelief=SOLID,  bg=cor1, fg=cor0, font=('Ivy 10 bold'), anchor="center", relief=RAISED )
     b_copiar.grid(row=4, column=2, columnspan=2,  sticky=NSEW, pady=10, padx=1)
     
-
-         # Definindo Cada Tipo:
-alfabeto_menos = string.ascii_lowercase
-alfabeto_mais = string.ascii_uppercase
-numeros = '123456789'
-simbolos = "[]{}()*;/,_-"
 
 
 var =IntVar()
