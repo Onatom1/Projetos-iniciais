@@ -163,6 +163,9 @@ chek_4.grid(row=3, column=0,  sticky=NSEW, pady=1, padx=2)
 b_gerar_senha = Button(frame_box, command=criar_senha, text="Gerar senha",width=32, height=1, overrelief=SOLID,  bg=cor3, fg="white", font=('Ivy 10 bold'), anchor="center", relief=FLAT )
 b_gerar_senha.grid(row=5, column=0,  sticky=NSEW, pady=20, padx=0, columnspan=5)
 
+# Rodapé --------------------------------------------------------------
+rodape_label = Label(root, text='By Yury Mota', font=('Verdana 5'), bg=cor1, fg=cor3)
+rodape_label.place(relx=0, rely=1.0, anchor=SW, y=2)
 
 
 root.mainloop()
